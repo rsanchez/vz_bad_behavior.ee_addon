@@ -84,7 +84,7 @@ class Vz_bad_behavior_ext {
         
         // Use default settings
         $this->default_settings['log_table'] = $this->EE->db->dbprefix.'bad_behavior';
-    	$this->EE->db->update('extensions', array('settings' => serialize($this->default_settings)));
+    	$this->EE->db->update('extensions', array('settings' => serialize($this->default_settings)), array('class' => __CLASS__));
 	}
 
 	/**
